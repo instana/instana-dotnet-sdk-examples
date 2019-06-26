@@ -3,3 +3,9 @@ InstanaSDKExampleApp/.vs/
 InstanaSDKExampleApp/InstanaSDKExampleApp/bin/
 InstanaSDKExampleApp/InstanaSDKExampleApp/obj/
 InstanaSDKExampleApp/packages/
+WindowsFormsSDKExample/.vs/
+WindowsFormsSDKExample/InstanaSDKExampleApp/bin/Debug/Instana.ManagedTracing.Api.dll
+WindowsFormsSDKExample/InstanaSDKExampleApp/bin/
+WindowsFormsSDKExample/InstanaSDKExampleApp/obj/
+WindowsFormsSDKExample/packages/Instana.ManagedTracing.Sdk.1.0.6/Instana.ManagedTracing.Sdk.1.0.6.nupkg
+WindowsFormsSDKExample/packages/
