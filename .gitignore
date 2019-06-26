@@ -1,0 +1,5 @@
+*.user
+InstanaSDKExampleApp/.vs/
+InstanaSDKExampleApp/InstanaSDKExampleApp/bin/
+InstanaSDKExampleApp/InstanaSDKExampleApp/obj/
+InstanaSDKExampleApp/packages/
