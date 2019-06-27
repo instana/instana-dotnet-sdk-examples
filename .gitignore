@@ -9,3 +9,8 @@ WindowsFormsSDKExample/InstanaSDKExampleApp/bin/
 WindowsFormsSDKExample/InstanaSDKExampleApp/obj/
 WindowsFormsSDKExample/packages/Instana.ManagedTracing.Sdk.1.0.6/Instana.ManagedTracing.Sdk.1.0.6.nupkg
 WindowsFormsSDKExample/packages/
+OrleansExampleHost/.vs/
+OrleansExampleHost/OrleansExample.Grains.Impl/bin/
+**/bin/
+**/obj/
+**/packages/
