@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbRegion = new System.Windows.Forms.ComboBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbRegion = new System.Windows.Forms.ComboBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnOpenPopup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -55,6 +56,26 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 180;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Code";
+            this.columnHeader2.Width = 175;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Capital";
+            this.columnHeader3.Width = 250;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Population";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -82,39 +103,30 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(345, 34);
+            this.btnRefresh.Location = new System.Drawing.Point(345, 24);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(207, 28);
+            this.btnRefresh.Size = new System.Drawing.Size(207, 46);
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refresh List";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
-            // columnHeader1
+            // btnOpenPopup
             // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 180;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Code";
-            this.columnHeader2.Width = 175;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Capital";
-            this.columnHeader3.Width = 250;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Population";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnOpenPopup.Location = new System.Drawing.Point(576, 24);
+            this.btnOpenPopup.Name = "btnOpenPopup";
+            this.btnOpenPopup.Size = new System.Drawing.Size(206, 46);
+            this.btnOpenPopup.TabIndex = 4;
+            this.btnOpenPopup.Text = "Open Popup";
+            this.btnOpenPopup.UseVisualStyleBackColor = true;
+            this.btnOpenPopup.Click += new System.EventHandler(this.BtnOpenPopup_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1297, 942);
+            this.Controls.Add(this.btnOpenPopup);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.cbRegion);
             this.Controls.Add(this.label1);
@@ -137,5 +149,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button btnOpenPopup;
     }
 }

@@ -3,6 +3,7 @@ using Instana.ManagedTracing.Sdk.Spans;
 using InstanaSDKExampleApp.Services.Countries;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
 using System.Windows.Forms;
@@ -39,7 +40,9 @@ namespace InstanaSDKExampleApp
             {
                 // set a tag on the span, so we know which region has been selected by the user
                 span.SetTag("region", cbRegion.SelectedItem == null ? "NONE SELECTED" : (string)cbRegion.SelectedItem);
-                if(cbRegion.SelectedItem == null)
+                span.SetTag(new string[] { "infrastructure", "machine" }, Environment.MachineName);
+
+                if (cbRegion.SelectedItem == null)
                 {
                     MessageBox.Show("Please select a region first");
                     return;
@@ -55,7 +58,7 @@ namespace InstanaSDKExampleApp
                 }
                 else
                 {
-                    if(result.CallException!=null)
+                    if (result.CallException != null)
                     {
                         MessageBox.Show(result.CallException.Message, "Error calling REST-API", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         span.SetException(result.CallException);
@@ -79,6 +82,15 @@ namespace InstanaSDKExampleApp
                     ListViewItem item = new ListViewItem(new string[] { country.Name, country.Capital, country.Capital, country.Population.ToString() });
                     listView1.Items.Add(item);
                 }
+            }
+        }
+
+        private void BtnOpenPopup_Click(object sender, EventArgs e)
+        {
+            using (var span = CustomSpan.CreateEntry(this, (ISpanContext)null, "Open Popup Form"))
+            {
+                frmPopup popup = new frmPopup();
+                popup.Show();
             }
         }
     }
