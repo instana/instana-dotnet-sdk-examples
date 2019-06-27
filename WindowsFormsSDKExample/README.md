@@ -22,10 +22,14 @@ InstanaSDKExampleApp.exe
 ```
 
 ## What you will see
-This simple example creates traces for two transactions. The first transaction called `Main Window Load` is rather simple and does not really contain anything. But it displays how you can create traces for any event happening on your application.
+This simple example creates traces for three transactions. 
+
+The first transaction called `Main Window Load` is rather simple and does not really contain anything. But it displays how you can create traces for any event happening on your application.
 
 The second transaction is called `Get Country List` which contains several spans which show you what happens inside the app when you click the refresh-button on the UI.
 This transaction contains both, codified spans for things happening inside the control-flow, as well as an automatically traced call to a http-resource.
+
+The third trace can be created by clicking the "Open Popup" button. This will create a trace starting at the click-handler and spanning over the load-handler for a popup-form.
 
 Feel free to extend this example to your needs and take it as a starting point for instrumenting your Windows Forms based applications.
 
